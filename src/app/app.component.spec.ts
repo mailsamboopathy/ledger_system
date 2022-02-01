@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ledger_system'`, () => {
+  it(`should have as title 'ledgersystem'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ledger_system');
+    expect(app.title).toEqual('ledgersystem');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ledger_system app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('ledgersystem app is running!');
   });
 });
