@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
   public users: Array<any>;
   public userSarvana: any;
-
+  public title: string; 
 
   constructor() {
+    this.title = "User Detail";
     this.users = [];
     this.userSarvana = {
       "name": "Sarvana",
