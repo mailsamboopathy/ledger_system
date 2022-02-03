@@ -1,0 +1,29 @@
+.user{
+    display: flex;
+    flex-direction: row; 
+
+    width: 90vw;
+    height: 5rem;
+    background-color: #fff;
+    padding: .5rem 1rem;
+    margin: 1rem 2rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.user__name {
+    margin: inherit;
+    width: 20rem;   
+    padding: 2px;
+}
+    
+.user__age {
+    margin: inherit;
+    padding: 2px;
+    
+}
+
+.user__gender {
+    margin: inherit;
+    padding: 2px;
+}
