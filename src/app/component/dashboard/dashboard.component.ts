@@ -17,27 +17,26 @@ export class DashboardComponent implements OnInit {
     this.uniqueNames = new Set<string>();
     this.users = [
       new Person("Sriram",34,"male"),   
-      new Person("Siva",35,"male"),
+      new Person("Siva",35,"female"),
       {
-        "name": "Siva",
-        "age": 35,
+        "name": "Shruthi",
+        "age": 30,
         "gender": "male"
       },
       {
-        "name": "Nithyan",
+        "name": "Nithya",
         "age": 60,
-        "gender": "male"
+        "gender": "female"
       }
     ];
-    this.userSarvana = new Person("Somu", 36, "male");
-    this.userSarvana = {
-      "name": "Sarvana",
-      "age": 30,
-      "gender": "male"
-    }
-    this.userDisplay();
-  }
 
+    this.userSarvana = new Person("Somu", 36, "male");
+    this.userDisplay();
+    this.barber(this.userSarvana); 
+    let tempFunc = this.barber;
+    tempFunc(this.userSarvana);    
+  }
+  
   ngOnInit(): void {
     // this.users = []
   }
@@ -45,9 +44,21 @@ export class DashboardComponent implements OnInit {
   public userDisplay() {
     console.log("Finish all pending tasks");
     console.log("Length of users object  ", this.users.length);
+  
     for (let i=0; i< this.users.length; i++){
-      console.log("User Number ",i);
+      let user = this.users[i];
+      console.log("User Name", user.name);
     }
+  
+    console.log("User at Index 4",this.users[3]);
+    
+    this.users.forEach( (user: Person) => {
+      console.log("User in Lamba Function", user.gender)
+    }  );
+    // this.users.forEach(this.barber);
+  }
 
+  public barber(user: Person) {
+    console.log("Make the Hair shorter", user);
   }
 }

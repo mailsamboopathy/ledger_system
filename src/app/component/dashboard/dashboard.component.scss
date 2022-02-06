@@ -3,7 +3,7 @@
     
 }
 
-.user{
+.container{
     display: flex;
     flex-direction: row; 
 
@@ -16,19 +16,19 @@
     border-radius: 15px;
 }
 
-.user__name {
+.container__name {
     margin: inherit;
     width: 20rem;   
     padding: 2px;
 }
     
-.user__age {
+.container__age {
     margin: inherit;
     padding: 2px;
     
 }
 
-.user__gender {
+.container__gender {
     margin: inherit;
     padding: 2px;
 }
