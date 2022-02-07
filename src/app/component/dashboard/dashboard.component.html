@@ -7,7 +7,8 @@
     <img src="/assets/image/logo_image.png" alt="logo">
 </div>
 
-<div *ngFor="let user of users" class="container"> 
+<div *ngFor="let user of users" class="container" 
+  [ngClass]="(user.gender == 'female')? 'container--pink':'container--green'">
     <div class="container__name"> {{user.name}}</div>
     <div class="container__age">{{user.age}}</div>
     <div class="container__gender">{{user.gender}}</div>

@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
     this.uniqueNames = new Set<string>();
     this.users = [
       new Person("Sriram",34,"male"),   
-      new Person("Siva",35,"female"),
+      new Person("Nila",35,"female"),
       {
         "name": "Shruthi",
         "age": 30,
