@@ -1,0 +1,29 @@
+<form novalidate #logindata="ngForm" (ngSubmit)="submitForm(logindata)">
+    <div>
+        <label for="username">User Name</label>
+        <input id="username" name="name" type="text" [(ngModel)]="userdata.loginid"> 
+    </div>    
+
+    <div>
+        <label for="pass">Password</label>
+        <input id="pass" name="p" type="password" [(ngModel)]="userdata.password"> 
+    </div>
+
+    <div>
+        <label for="fruits">Fruits</label>
+        <!-- <select id="fruits" [(ngModel)]="userdata.fruits" [ngModelOptions]="{standalone: true}">  
+            <option value="apple">Kashmir apple</option>
+        </select> -->
+        
+        <select id="fruits" [(ngModel)]="userdata.fruits" [ngModelOptions]="{standalone: true}">  
+            <option value="apple">Kashmir apple</option>
+            <option value="orange">Salem orange</option>
+            <option value="mango">Salem mango</option>
+        </select>
+    </div>
+
+    <div>
+        <button type="submit" [disabled]="submitButtonState">Login</button>
+    </div>
+</form>
+<button type="submit" [disabled]="submitButtonState">Register</button>
