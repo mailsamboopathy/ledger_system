@@ -6,13 +6,13 @@ import { NgForm } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit {  
   public userdata;
   public submitButtonState: boolean;
   public screens: Array<string>;
-  constructor() {
+  constructor() {    
     this.userdata = {
-      "loginid": '',
+      "loginid": 'sample',
       "password": '', 
       "fruits": ''
     }
@@ -22,11 +22,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  public submitForm(data: NgForm) {
+   
+  public submitForm() {
 
     console.log("Submit Form Called");
-    console.log(data.value);
     console.log(this.userdata);
 
   }

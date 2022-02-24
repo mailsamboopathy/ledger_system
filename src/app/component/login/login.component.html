@@ -1,7 +1,9 @@
-<form novalidate #logindata="ngForm" (ngSubmit)="submitForm(logindata)">
+<form novalidate (ngSubmit)="submitForm()">
     <div>
         <label for="username">User Name</label>
-        <input id="username" name="name" type="text" [(ngModel)]="userdata.loginid"> 
+        <input id="username" name="name" type="text" 
+            [(ngModel)]="userdata.loginid"        
+        /> 
     </div>    
 
     <div>
