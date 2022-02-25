@@ -12,16 +12,21 @@
     </div>
 
     <div>
-        <label for="fruits">Fruits</label>
-        <!-- <select id="fruits" [(ngModel)]="userdata.fruits" [ngModelOptions]="{standalone: true}">  
-            <option value="apple">Kashmir apple</option>
-        </select> -->
-        
+        <label for="fruits">Landing Page</label>
         <select id="fruits" [(ngModel)]="userdata.fruits" [ngModelOptions]="{standalone: true}">  
+            <option value="">Select</option>
+            <ng-container *ngFor="let screen of screens; let i=index">
+                <option value="{{screen}}">{{screen}} - {{i}}</option>    
+            </ng-container>
+            
+        </select>
+        
+        <!-- <select id="fruits" [(ngModel)]="userdata.fruits" [ngModelOptions]="{standalone: true}">  
+            <option value="">Select</option>
             <option value="apple">Kashmir apple</option>
             <option value="orange">Salem orange</option>
             <option value="mango">Salem mango</option>
-        </select>
+        </select> -->
     </div>
 
     <div>
